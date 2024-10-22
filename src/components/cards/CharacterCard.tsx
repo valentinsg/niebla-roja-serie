@@ -20,12 +20,15 @@ export const CharacterCard = ({ id, name, description, imageUrl }: CharacterCard
       borderRadius="lg"
       bg="whiteAlpha.100"
       backdropFilter="blur(8px)"
-      _hover={{ 
-        transform: 'scale(1.02)', 
+      _hover={{
+        transform: 'scale(1.02)',
         transition: '0.2s',
         bg: 'whiteAlpha.200'
       }}
       transition="0.2s"
+      minH="300px"
+
+      h={"100%"}
     >
       <Image
         src={imageUrl}
@@ -33,19 +36,20 @@ export const CharacterCard = ({ id, name, description, imageUrl }: CharacterCard
         borderRadius="md"
         mb={4}
         w="100%"
-        h="300px"
         objectFit="cover"
       />
-      <Heading size="md" color="red.300" mb={4}>
+      <Heading size="lg" color="#FF1A1A"
+        fontFamily="'Bebas Neue', sans-serif" mb={4}>
         {name}
       </Heading>
-      <Text>{description}</Text>
+      <Text >{description}</Text>
       <Button
         mt={4}
         variant="outline"
-        colorScheme="red"
+        fontFamily="'Bebas Neue', sans-serif"
         size="sm"
         w="full"
+        letterSpacing={1}
       >
         Ver más
       </Button>
