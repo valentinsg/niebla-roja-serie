@@ -14,7 +14,6 @@ import Jora from './img/jora.jpg';
 import Kea from './img/kea.jpg';
 import Nicole from './img/nicole.jpg';
 import Rammus from './img/rammus.jpg';
-import { RedFog } from './components/effects/RedFog';
 
 const CharacterDetail = () => {
   const { id } = useParams();
@@ -137,10 +136,11 @@ R.A.M.M.U, por sus sílabas “Robot Argentino Multifunción Mecánico Universal
     );
   }
 
+  const otherCharacters = Object.keys(characterData).filter((key): key is keyof typeof characterData => key !== id);
+
   return (
-    <Box minH="100vh" bg="black" color="white">
-      <RedFog />
-      <Container maxW="container.xl" py={20}>
+    <Box minH="100vh" bg="blackAlpha.800" color="white" zIndex={9999}>
+      <Container maxW="container.xl" py={20} >
         <VStack spacing={8} align="stretch">
           <Button
             onClick={() => navigate('/')}
@@ -158,6 +158,9 @@ R.A.M.M.U, por sus sílabas “Robot Argentino Multifunción Mecánico Universal
               borderRadius="lg"
               objectFit="cover"
               h="400px"
+              border="5px solid"
+              borderColor="red.300"
+              boxShadow="0 0 20px red"
             />
 
             <VStack align="stretch" spacing={6}>
@@ -203,6 +206,8 @@ R.A.M.M.U, por sus sílabas “Robot Argentino Multifunción Mecánico Universal
                       bg="whiteAlpha.100"
                       borderRadius="md"
                       textAlign="center"
+                      border="2px solid"
+                      borderColor="red.500"
                     >
                       {trait}
                     </Box>
@@ -213,7 +218,7 @@ R.A.M.M.U, por sus sílabas “Robot Argentino Multifunción Mecánico Universal
           </Grid>
 
           <Box>
-            <Heading size="lg" color="red.300" mb={4}>
+            <Heading size="lg" color="#FF1A1A" fontFamily={"Bebas Neue"} letterSpacing={1}>
               Historia
             </Heading>
             <Text
@@ -223,6 +228,38 @@ R.A.M.M.U, por sus sílabas “Robot Argentino Multifunción Mecánico Universal
             >
               {character.fullDescription}
             </Text>
+          </Box>
+
+          {/* Sección de redirección rápida a otros personajes */}
+          <Box mt={10}>
+            <Heading size="lg" color="#FF1A1A" fontFamily={"Bebas Neue"} mb={4} letterSpacing={1}>
+              Otros personajes
+            </Heading>
+            <Grid templateColumns="repeat(5, 1fr)" gap={4}>
+              {otherCharacters.map((key) => (
+                <Box
+                  key={key}
+                  onClick={() => navigate(`/character/${key}`)}
+                  cursor="pointer"
+                  border="2px solid"
+                  borderColor="red.500"
+                  borderRadius="lg"
+                  p={2}
+                  textAlign="center"
+                  _hover={{ bg: 'red.500', color: 'white' }}
+                >
+                  <Image
+                    src={characterData[key as keyof typeof characterData].imageUrl}
+                    alt={characterData[key as keyof typeof characterData].name}
+                    borderRadius="full"
+                    objectFit="cover"
+                    h="100px"
+                    w="100px"
+                  />
+                  <Text mt={2}>{characterData[key as keyof typeof characterData].name}</Text>
+                </Box>
+              ))}
+            </Grid>
           </Box>
         </VStack>
       </Container>
