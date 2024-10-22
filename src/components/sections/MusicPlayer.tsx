@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Button, Flex, Image  } from '@chakra-ui/react';
 import Rammu from '../../img/rammu.png';
-import { relative } from 'path';
 
 
 const MusicPlayer = () => {
@@ -43,6 +42,8 @@ const MusicPlayer = () => {
                 fontSize="lg" 
                 right="10px" 
                 ml={-6}
+                fontFamily={'"Bebas Neue"'}
+                fontWeight={400}
                 bottom="10px" 
                 borderTopRightRadius="xl"
                 borderBottomRightRadius="xl"

@@ -15,12 +15,14 @@ export const Hero = () => (
         Sumérgete en el misterio y la intriga de nuestra serie
       </Text>
       <Button
-        colorScheme="red"
+        bg={"#FF1A1A"}
+        fontFamily={'"Bebas Neue"'}
+        fontWeight={400}
         size="lg"
         _hover={{ transform: 'scale(1.05)' }}
         transition="0.2s"
       >
-        Ver Ahora
+        Ver trailer aquí
       </Button>
     </VStack>
   </Container>
