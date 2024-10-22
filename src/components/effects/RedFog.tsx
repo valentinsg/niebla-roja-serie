@@ -45,7 +45,7 @@ export const RedFog = () => (
     right="0"
     bottom="0"
     pointerEvents="none"
-    zIndex={1}
+    zIndex={0}
     overflow="hidden"
   >
     {/* Capa 1 de niebla - más suave */}

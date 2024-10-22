@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Button, Flex, Image } from '@chakra-ui/react';
+import { Button, Flex, Image, Text} from '@chakra-ui/react';
 import Rammu from '../../img/rammu.png';
 
 
@@ -32,11 +32,11 @@ const MusicPlayer = () => {
                     transform="scaleX(-1)"
                 />
             </Button>
-            <Flex
+            <Text
                 position="relative"
                 bg="gray.700"
                 borderRadius="md"
-                p={2}
+                p={3}
                 color="white"
                 fontSize="lg"
                 right="10px"
@@ -46,19 +46,9 @@ const MusicPlayer = () => {
                 bottom="10px"
                 borderTopRightRadius="xl"
                 borderBottomRightRadius="xl"
-                _after={{
-                    content: '""',
-                    position: 'absolute',
-                    bottom: '-10px',
-                    left: '50%',
-                    transform: 'translateX(-50%)',
-                    borderWidth: '10px',
-                    borderStyle: 'solid',
-                    borderColor: 'gray.700 transparent transparent transparent',
-                }}
             >
                 {isPlaying ? 'Disfruta de Soda Stereo!' : 'Apretame si te gusta escuchar Soda Stereo'}
-            </Flex>
+            </Text>
         </Flex>
     );
 };
