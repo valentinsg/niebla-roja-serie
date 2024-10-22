@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Button, Flex, Image  } from '@chakra-ui/react';
+import { Button, Flex, Image } from '@chakra-ui/react';
 import Rammu from '../../img/rammu.png';
 
 
@@ -25,26 +25,25 @@ const MusicPlayer = () => {
     };
 
     return (
-        <Flex alignItems={"center"} justifyContent={"flex-end"} position={{base: "relative", md:"fixed"}} mt={20} ml={10}>
-            <Button onClick={togglePlay} variant="unstyled" aria-label="Apretame si te gusta soda">
-            <Image
-                src={Rammu}
-                w={"175px"}
-                transform="scaleX(-1)" 
-            />
+        <Flex w={"15vw"} mt={20} ml={10} zIndex={1} position={"absolute"}>
+            <Button onClick={togglePlay} variant="unstyled" aria-label="Apretame si te gusta soda"  >
+                <Image
+                    src={Rammu}
+                    transform="scaleX(-1)"
+                />
             </Button>
-            <Flex 
-                position="relative" 
-                bg="gray.700" 
-                borderRadius="md" 
+            <Flex
+                position="relative"
+                bg="gray.700"
+                borderRadius="md"
                 p={2}
-                color="white" 
-                fontSize="lg" 
-                right="10px" 
+                color="white"
+                fontSize="lg"
+                right="10px"
                 ml={-6}
                 fontFamily={'"Bebas Neue"'}
                 fontWeight={400}
-                bottom="10px" 
+                bottom="10px"
                 borderTopRightRadius="xl"
                 borderBottomRightRadius="xl"
                 _after={{

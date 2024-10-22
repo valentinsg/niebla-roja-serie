@@ -63,10 +63,10 @@ const episodes = [
 const App = () => {
   return (
     <Box minH="100vh" bg="black" color="white" display={"flex"} flexDir={"column"}>
+      <MusicPlayer />
       <StarField />
       <RedFog />
       <SpaceshipTrails />
-      <MusicPlayer />
       <Hero />
       <Synopsis />
       <Characters />
