@@ -14,6 +14,7 @@ import Jora from './img/jora.jpg';
 import Kea from './img/kea.jpg';
 import Nicole from './img/nicole.jpg';
 import Rammus from './img/rammus.jpg';
+import { StarField } from './components/effects/Starfield';
 
 const CharacterDetail = () => {
   const { id } = useParams();
@@ -140,6 +141,7 @@ R.A.M.M.U, por sus sílabas “Robot Argentino Multifunción Mecánico Universal
 
   return (
     <Box minH="100vh" bg="blackAlpha.800" color="white" zIndex={9999}>
+      <StarField />
       <Container maxW="container.xl" py={20} >
         <VStack spacing={8} align="stretch">
           <Button
@@ -147,6 +149,12 @@ R.A.M.M.U, por sus sílabas “Robot Argentino Multifunción Mecánico Universal
             variant="outline"
             colorScheme="red"
             alignSelf="flex-start"
+            color="#FF1A1A"
+            borderColor="#FF1A1A"
+            fontFamily="'Bebas Neue', sans-serif"
+            fontSize="2xl"
+            boxShadow="0 0 10px rgba(255, 26, 26, 0.5)"
+            _hover={{ bg: '#FF1A1A', color: 'white', boxShadow: '0 0 20px rgba(255, 26, 26, 0.8)' }}
           >
             ← Volver
           </Button>
@@ -157,24 +165,28 @@ R.A.M.M.U, por sus sílabas “Robot Argentino Multifunción Mecánico Universal
               alt={character.name}
               borderRadius="lg"
               objectFit="cover"
-              h="400px"
+              h="600px"
               border="5px solid"
               borderColor="red.300"
               boxShadow="0 0 20px red"
+              zIndex={9999}
             />
 
             <VStack align="stretch" spacing={6}>
-              <Heading
-                fontSize={{ base: "6xl", md: "8xl", lg: "9xl" }}
-                color="#FF1A1A"
-                fontFamily="'Bebas Neue', sans-serif"
-                textShadow="0 0 20px rgba(255, 26, 26, 0.5)"
-              >
-                {character.name}
-              </Heading>
-              <Text color="red.200" fontSize="xl">
-                {character.role}
-              </Text>
+              <Box >
+                <Heading
+                  fontSize={{ base: "6xl", md: "8xl", lg: "9xl" }}
+                  color="#FF1A1A"
+                  fontFamily="'Bebas Neue', sans-serif"
+                  textShadow="0 0 20px rgba(255, 26, 26, 0.5)"
+                >
+                  {character.name}
+                </Heading>
+                <Text color="white" mt={-4} fontSize="3xl" fontFamily="'Bebas Neue', sans-serif"
+                >
+                  {character.role}
+                </Text>
+              </Box>
               <Text fontSize="lg">
                 <strong>Raza:</strong> {character.race}
               </Text>
@@ -194,8 +206,8 @@ R.A.M.M.U, por sus sílabas “Robot Argentino Multifunción Mecánico Universal
                 <strong>Peso:</strong> {character.weight}
               </Text>
 
-              <Box>
-                <Heading size="md" color="red.300" mb={4}>
+              <Box mt={10}>
+                <Heading size="md" fontSize="3xl" fontFamily="'Bebas Neue', sans-serif" mb={4}>
                   Características
                 </Heading>
                 <Grid templateColumns="repeat(2, 1fr)" gap={4}>
@@ -246,7 +258,7 @@ R.A.M.M.U, por sus sílabas “Robot Argentino Multifunción Mecánico Universal
                   borderRadius="lg"
                   p={2}
                   textAlign="center"
-                  _hover={{ bg: 'red.500', color: 'white' }}
+                  _hover={{ bg: '#FF1A1A', color: 'white', boxShadow: '0 0 20px rgba(255, 26, 26, 0.5)' }}
                 >
                   <Image
                     src={characterData[key as keyof typeof characterData].imageUrl}

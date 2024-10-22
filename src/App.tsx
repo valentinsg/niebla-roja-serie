@@ -72,7 +72,11 @@ const App = () => {
       <Characters />
       <Container maxW="container.xl" py={20}>
         <VStack spacing={12}>
-          <Heading size="2xl" color="red.300">
+          <Heading 
+            size="2xl" 
+            color="#FF1A1A"
+            fontFamily="'Bebas Neue', sans-serif"
+            textShadow="0 0 20px rgba(255, 26, 26, 0.5)">
             Episodios
           </Heading>
           <Grid
