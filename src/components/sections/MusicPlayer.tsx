@@ -25,7 +25,7 @@ const MusicPlayer = () => {
     };
 
     return (
-        <Flex w={{base: "40vw", md:"15vw"}} mt={20} ml={10} zIndex={999} position={"absolute"} >
+        <Flex w={{base: "45vw", md:"15vw"}} mt={20} ml={10} zIndex={999} position={"absolute"} >
             <Button w={{base: "40vw", md:"15vw"}} onClick={togglePlay} variant="unstyled" aria-label="Apretame si te gusta soda" mt={14} ml={{base: -5, md:0}}>
                 <Image
                     src={Rammu}
@@ -35,19 +35,17 @@ const MusicPlayer = () => {
             <Text
                 bg="gray.700"
                 borderRadius="md"
-                p={2}
-                mt={-10}
+                p={4}
                 color="white"
-                fontSize={{base: "md", md:"lg"}}
+                fontSize={{base: "lg", md:"lg"}}
                 right="10px"
-                ml={-6}
                 fontFamily={'"Bebas Neue"'}
                 fontWeight={400}
                 bottom="10px"
                 borderTopRightRadius="xl"
                 borderBottomRightRadius="xl"
             >
-                {isPlaying ? 'Disfruta de Soda Stereo!' : 'Apretame si te gusta escuchar Soda Stereo'}
+                {isPlaying ? 'Disfruta de Soda!!!' : 'Apretame si te gusta escuchar Soda Stereo!!!'}
             </Text>
         </Flex>
     );
