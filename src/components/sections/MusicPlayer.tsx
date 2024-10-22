@@ -25,20 +25,20 @@ const MusicPlayer = () => {
     };
 
     return (
-        <Flex w={"15vw"} mt={20} ml={10} zIndex={1} position={"absolute"}>
-            <Button onClick={togglePlay} variant="unstyled" aria-label="Apretame si te gusta soda"  >
+        <Flex w={{base: "40vw", md:"15vw"}} mt={20} ml={10} zIndex={999} position={"absolute"} >
+            <Button w={{base: "40vw", md:"15vw"}} onClick={togglePlay} variant="unstyled" aria-label="Apretame si te gusta soda" mt={14} ml={{base: -5, md:0}}>
                 <Image
                     src={Rammu}
                     transform="scaleX(-1)"
                 />
             </Button>
             <Text
-                position="relative"
                 bg="gray.700"
                 borderRadius="md"
-                p={3}
+                p={2}
+                mt={-10}
                 color="white"
-                fontSize="lg"
+                fontSize={{base: "md", md:"lg"}}
                 right="10px"
                 ml={-6}
                 fontFamily={'"Bebas Neue"'}

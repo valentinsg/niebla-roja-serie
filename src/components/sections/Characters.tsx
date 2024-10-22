@@ -30,7 +30,7 @@ export const Characters = () => (
 // src/data/characters.ts
 export const charactersData = [
     {
-        id: "ana-silva",
+        id: "jora-white",
         name: "Jora White",
         description: "Jora es un mecánico perteneciente a la luna satélite de Saturno, llamada Titán.",
         imageUrl: Jora,
@@ -49,7 +49,7 @@ export const charactersData = [
         ]
     },
     {
-        id: "lucas-ramirez",
+        id: "kea-stroll",
         name: "Kea Ströll",
         description: "Kea es un ladrón de segunda, hijo de una ama de casa y un padre que lo abandonó de pequeño.",
         imageUrl: Kea,
@@ -70,7 +70,7 @@ export const charactersData = [
         ]
     },
     {
-        id: "clara-fernandez",
+        id: "nicole-smirnova",
         name: "Nicole Smirnova",
         description: "Nació en un planeta congelado, tuvo que sobrevivir en temperaturas extremas y a bandidos que saqueaban la zona.",
         imageUrl: Nicole,
@@ -89,7 +89,7 @@ export const charactersData = [
         ]
     },
     {
-        id: "mateo-garcia",
+        id: "norman-keys",
         name: "Norman Keys",
         description: "Uno de los líderes de la Guardia Roja, controlan los recursos y a los seres que habitan en los planetas.",
         imageUrl: Norman,
@@ -104,7 +104,7 @@ export const charactersData = [
         ]
     },
     {
-        id: "olivia-ramos",
+        id: "rammu",
         name: "R.A.M.M.U",
         description: "Un pequeño robot creado y distribuido por la antigua compañía argentina, “Mercado Libre”.",
         imageUrl: Rammus,
