@@ -27,7 +27,6 @@ export const CharacterCard = ({ id, name, description, imageUrl }: CharacterCard
       }}
       transition="0.2s"
       minH="300px"
-
       h={"100%"}
     >
       <Image

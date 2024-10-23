@@ -100,6 +100,7 @@ const App = () => {
                 </Text>
               </Box>
             ))}
+
           </Grid>
         </VStack>
       </Container>
